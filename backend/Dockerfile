@@ -22,4 +22,5 @@ RUN poetry install --no-interaction --no-root
 COPY . .
 
 EXPOSE 8000
-CMD ["bash","-c","poetry run bash ./prestart.sh && poetry run uvicorn app.main:app --host 0.0.0.0 --port 8000"]
+CMD ["bash","-c","poetry run uvicorn app.main:app --host 0.0.0.0 --port 8000"]
+#poetry run bash ./prestart.sh
